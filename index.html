@@ -1,5 +1,6 @@
 ﻿<!DOCTYPE html>
 <html lang="de">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -20,26 +21,26 @@
             --octet3-bg: hsl(354, 100%, 95%);
             --octet4-bg: hsl(56, 83%, 66%);
             --ip-range-bg: hsl(0, 0%, 91%);
-            
+
             /* B3 Design Tokens */
             --color-primary-500: #3d8b4d;
             --color-primary-600: #2d7038;
             --color-primary-700: #1f5527;
             --color-primary-50: #eef7f0;
             --color-primary-100: #c8e6d0;
-            
+
             --color-success: #3d8b4d;
             --color-error: #d62728;
             --color-warning: #ff7f0e;
             --color-info: #1f77b4;
-            
+
             --color-surface: #ffffff;
             --color-bg: #f6f7f8;
             --color-text: #1f2d33;
             --color-text-muted: #8e98a1;
             --color-border: #e3e7ea;
             --color-hover: #f0f2f3;
-            
+
             --space-1: 4px;
             --space-2: 6px;
             --space-3: 10px;
@@ -47,7 +48,7 @@
             --space-5: 16px;
             --space-6: 18px;
             --space-8: 24px;
-            
+
             --font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
             --font-size-sm: 14px;
             --font-size-base: 15px;
@@ -59,16 +60,16 @@
             --line-height-tight: 1.2;
             --line-height-normal: 1.4;
             --line-height-relaxed: 1.5;
-            
+
             --radius-sm: 4px;
             --radius: 6px;
             --radius-lg: 8px;
-            
+
             --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
             --shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
             --shadow-md: 0 2px 6px rgba(0, 0, 0, 0.15);
             --shadow-lg: 0 4px 12px rgba(0, 0, 0, 0.2);
-            
+
             --transition-fast: 150ms ease;
             --transition-base: 200ms ease;
             --transition-slow: 300ms ease;
@@ -100,6 +101,7 @@
             box-shadow: var(--shadow-md);
             padding: var(--space-6);
         }
+
         header {
             margin-bottom: var(--space-6);
         }
@@ -206,15 +208,41 @@
             background-color: #ffebee;
         }
 
-        .octet-input.octet1 { background-color: var(--octet1-bg); }
-        .octet-input.octet2 { background-color: var(--octet2-bg); }
-        .octet-input.octet3 { background-color: var(--octet3-bg); }
-        .octet-input.octet4 { background-color: var(--octet4-bg); }
+        .octet-input.octet1 {
+            background-color: var(--octet1-bg);
+        }
 
-        .octet-input.octet1.invalid { background-color: #ffebee; border-color: #e7973c; }
-        .octet-input.octet2.invalid { background-color: #ffebee; border-color: #e7973c; }
-        .octet-input.octet3.invalid { background-color: #ffebee; border-color: #e7973c; }
-        .octet-input.octet4.invalid { background-color: #ffebee; border-color: #e7973c; }
+        .octet-input.octet2 {
+            background-color: var(--octet2-bg);
+        }
+
+        .octet-input.octet3 {
+            background-color: var(--octet3-bg);
+        }
+
+        .octet-input.octet4 {
+            background-color: var(--octet4-bg);
+        }
+
+        .octet-input.octet1.invalid {
+            background-color: #ffebee;
+            border-color: #e7973c;
+        }
+
+        .octet-input.octet2.invalid {
+            background-color: #ffebee;
+            border-color: #e7973c;
+        }
+
+        .octet-input.octet3.invalid {
+            background-color: #ffebee;
+            border-color: #e7973c;
+        }
+
+        .octet-input.octet4.invalid {
+            background-color: #ffebee;
+            border-color: #e7973c;
+        }
 
         .validation-error {
             position: absolute;
@@ -252,7 +280,7 @@
             right: 6px;
             width: 18px;
             height: 18px;
-            background: rgba(255,255,255,0.2);
+            background: rgba(255, 255, 255, 0.2);
             border: none;
             border-radius: 3px;
             color: white;
@@ -268,13 +296,13 @@
         }
 
         .validation-error-close:hover {
-            background: rgba(255,255,255,0.3);
+            background: rgba(255, 255, 255, 0.3);
         }
 
         .validation-suggestion {
             margin-top: 4px;
             padding-top: 4px;
-            border-top: 1px solid rgba(255,255,255,0.3);
+            border-top: 1px solid rgba(255, 255, 255, 0.3);
             font-size: 1em;
         }
 
@@ -310,12 +338,14 @@
             margin-right: 8px;
             display: inline-block;
             color: #2c3e50;
+
             .result-label {
                 font-weight: bold;
                 color: #555;
                 font-size: 1em;
                 margin-bottom: 3px;
             }
+
             border-radius: 15px;
             padding: 2px;
             gap: 2px;
@@ -450,10 +480,21 @@
             background-color: var(--host-color);
         }
 
-        .bit.octet1-bg { background-color: var(--octet1-bg); }
-        .bit.octet2-bg { background-color: var(--octet2-bg); }
-        .bit.octet3-bg { background-color: var(--octet3-bg); }
-        .bit.octet4-bg { background-color: var(--octet4-bg); }
+        .bit.octet1-bg {
+            background-color: var(--octet1-bg);
+        }
+
+        .bit.octet2-bg {
+            background-color: var(--octet2-bg);
+        }
+
+        .bit.octet3-bg {
+            background-color: var(--octet3-bg);
+        }
+
+        .bit.octet4-bg {
+            background-color: var(--octet4-bg);
+        }
 
         /* Results Section */
         .results-section {
@@ -877,6 +918,7 @@
         }
     </style>
 </head>
+
 <body>
     <div class="container">
         <header>
@@ -960,7 +1002,8 @@
             <div class="binary-container" id="binaryContainer">
                 <!-- Dynamically generated -->
             </div>
-            <div class="binary-label" style="margin-top: 15px;">Binärdarstellung Subnetzmaske (klickbar zum Umschalten)</div>
+            <div class="binary-label" style="margin-top: 15px;">Binärdarstellung Subnetzmaske (klickbar zum Umschalten)
+            </div>
             <div class="binary-container" id="maskBinaryContainer">
                 <!-- Dynamically generated -->
             </div>
@@ -1059,7 +1102,7 @@
 
         // Utility functions
         function ipToInt(octets) {
-            return (octets[0] << 24) | (octets[1] << 16) | (octets[2] << 8) | octets[3];
+            return ((octets[0] << 24) | (octets[1] << 16) | (octets[2] << 8) | octets[3]) >>> 0;
         }
 
         function intToIp(int) {
@@ -1164,23 +1207,23 @@
         function getMaskOctetError(octet) {
             const binary = octetToBinary(octet);
             const validOctets = getValidMaskOctets();
-            
+
             // Find closest valid values
             let lower = 0, upper = 255;
             for (const valid of validOctets) {
                 if (valid < octet && valid > lower) lower = valid;
                 if (valid > octet && valid < upper) upper = valid;
             }
-            
+
             let message = `❌ ${octet} ist ungültig!\n`;
             message += `Binär: ${binary}\n\n`;
             message += `Problem: Subnetzmasken-Oktette müssen in binär erst nur Einsen (1), dann nur Nullen (0) haben.\n\n`;
             message += `Gültige Werte: ${validOctets.join(', ')}`;
-            
+
             if (lower !== 0 || upper !== 255) {
                 message += `\n\n💡 Vorschlag: ${lower} oder ${upper}`;
             }
-            
+
             return message;
         }
 
@@ -1191,7 +1234,7 @@
                     return false;
                 }
             }
-            
+
             // Then check if the full mask is contiguous (all 1s followed by all 0s)
             const maskInt = ipToInt(maskOctets);
             let foundZero = false;
@@ -1203,7 +1246,7 @@
                     return false; // Found a 1 after a 0
                 }
             }
-            
+
             // Check octet sequence: once we hit a non-255 octet, all following must be 0
             let foundNon255 = false;
             for (let i = 0; i < 4; i++) {
@@ -1213,7 +1256,7 @@
                     return false; // Found 255 after a non-255 octet
                 }
             }
-            
+
             return true;
         }
 
@@ -1235,10 +1278,10 @@
                     const bitDiv = document.createElement('div');
                     bitDiv.className = 'bit';
                     bitDiv.textContent = bit;
-                    
+
                     // Add octet background color
                     bitDiv.classList.add(`octet${octetIndex + 1}-bg`);
-                    
+
                     // Add network/host class for background color
                     if (globalBitIndex < state.cidrBits) {
                         bitDiv.classList.add('network');
@@ -1256,15 +1299,15 @@
                 octetDiv.appendChild(bitsDiv);
                 container.appendChild(octetDiv);
             });
-            
+
             // Render subnet mask binary
             renderMaskBinary();
         }
-        
+
         function renderMaskBinary() {
             const container = document.getElementById('maskBinaryContainer');
             container.innerHTML = '';
-            
+
             const maskOctets = calculateSubnetMask(state.cidrBits);
 
             maskOctets.forEach((octet, octetIndex) => {
@@ -1280,7 +1323,7 @@
                     const bitDiv = document.createElement('div');
                     bitDiv.className = 'bit';
                     bitDiv.textContent = bit;
-                    
+
                     // Add network/host background color (not octet colors)
                     if (globalBitIndex < state.cidrBits) {
                         bitDiv.classList.add('network');
@@ -1300,13 +1343,13 @@
                 container.appendChild(octetDiv);
             });
         }
-        
+
         function toggleMaskBit(globalBitIndex) {
             // Clicking a network bit (1) should convert it to host bit (0)
             // This means reducing CIDR bits to this position
             // Clicking a host bit (0) should convert it to network bit (1)
             // This means increasing CIDR bits to include this position
-            
+
             if (globalBitIndex < state.cidrBits) {
                 // Currently network bit, make it and all following bits host bits
                 state.cidrBits = globalBitIndex;
@@ -1314,7 +1357,7 @@
                 // Currently host bit, make it and all previous bits network bits
                 state.cidrBits = globalBitIndex + 1;
             }
-            
+
             updateFromState();
         }
 
@@ -1347,7 +1390,7 @@
             document.getElementById('lastUsableIP').textContent = hasUsableHosts ? lastUsable.join('.') : 'Keine';
             document.getElementById('hostCount').textContent = hostCount.toLocaleString('de-DE');
             document.getElementById('totalIPs').textContent = totalIPs.toLocaleString('de-DE');
-            
+
             // Update bracket positions
             updateBrackets();
         }
@@ -1359,20 +1402,20 @@
                 </svg>
             `;
         }
-        
+
         function updateBrackets() {
             const ipList = document.querySelector('.ip-list');
             const usableContainer = document.getElementById('usableBracketContainer');
             const totalContainer = document.getElementById('totalBracketContainer');
             if (!ipList || !usableContainer || !totalContainer) return;
             const items = ipList.querySelectorAll('.ip-range-item');
-            
+
             if (items.length >= 5) {
                 const networkItem = items[0];
                 const firstUsableItem = items[1];
                 const lastUsableItem = items[3];
                 const broadcastItem = items[4];
-                
+
                 const totalBracket = document.getElementById('totalBracket');
                 const usableBracket = document.getElementById('usableBracket');
                 const networkRect = networkItem.getBoundingClientRect();
@@ -1381,22 +1424,22 @@
                 const broadcastRect = broadcastItem.getBoundingClientRect();
                 const usableContainerRect = usableContainer.getBoundingClientRect();
                 const totalContainerRect = totalContainer.getBoundingClientRect();
-                
+
                 // Total bracket: from network to broadcast
                 const networkTop = networkRect.top - totalContainerRect.top;
                 const broadcastBottom = broadcastRect.bottom - totalContainerRect.top;
                 const totalHeight = broadcastBottom - networkTop;
-                
+
                 totalBracket.style.top = networkTop + 'px';
                 totalBracket.style.height = totalHeight + 'px';
                 totalBracket.style.width = '30px';
                 totalBracket.innerHTML = getBraceSVGMarkup();
-                
+
                 // Usable bracket: from first usable to last usable
                 const firstUsableTop = firstUsableRect.top - usableContainerRect.top;
                 const lastUsableBottom = lastUsableRect.bottom - usableContainerRect.top;
                 const usableHeight = lastUsableBottom - firstUsableTop;
-                
+
                 usableBracket.style.top = firstUsableTop + 'px';
                 usableBracket.style.height = usableHeight + 'px';
                 usableBracket.style.width = '30px';
@@ -1409,7 +1452,7 @@
             state.octets.forEach((octet, i) => {
                 const input = document.getElementById(`octet${i + 1}`);
                 input.value = octet;
-                
+
                 // Update validation state
                 if (state.invalidOctets[i]) {
                     input.classList.add('invalid');
@@ -1433,16 +1476,16 @@
         function validateOctet(value, index) {
             const octetGroup = document.getElementById(`octet${index + 1}`).closest('.octet-group');
             let existingError = octetGroup.querySelector('.validation-error');
-            
+
             if (value < 0 || value > 255 || isNaN(value)) {
                 state.invalidOctets[index] = true;
-                
+
                 if (!existingError) {
                     existingError = document.createElement('div');
                     existingError.className = 'validation-error';
                     octetGroup.appendChild(existingError);
                 }
-                
+
                 if (value < 0) {
                     existingError.textContent = `Oktet ${index + 1}: Wert zu klein!`;
                 } else if (value > 255) {
@@ -1450,7 +1493,7 @@
                 } else {
                     existingError.textContent = `Oktet ${index + 1}: Ungültig!`;
                 }
-                
+
                 return false;
             } else {
                 state.invalidOctets[index] = false;
@@ -1466,7 +1509,7 @@
             const quizContent = document.getElementById('quizContent');
             const quizToggle = document.getElementById('quizToggle');
             const resultsSection = document.querySelector('.results-section');
-            
+
             if (state.quizExpanded) {
                 quizContent.classList.add('expanded');
                 quizToggle.classList.add('expanded');
@@ -1485,7 +1528,7 @@
                 const input = document.getElementById(`octet${i}`);
                 input.addEventListener('input', (e) => {
                     let value = parseInt(e.target.value);
-                    
+
                     if (validateOctet(value, i - 1)) {
                         value = Math.max(0, Math.min(255, value));
                         state.octets[i - 1] = value;
@@ -1498,7 +1541,7 @@
                         updateFromState();
                     }
                 });
-                
+
                 input.addEventListener('blur', (e) => {
                     // On blur, fix invalid values
                     let value = parseInt(e.target.value);
@@ -1524,7 +1567,7 @@
             // Mask inputs
             for (let i = 1; i <= 4; i++) {
                 const input = document.getElementById(`mask${i}`);
-                
+
                 // Handle arrow key increments to jump to next valid value
                 input.addEventListener('keydown', (e) => {
                     if (e.key === 'ArrowUp' || e.key === 'Up') {
@@ -1541,7 +1584,7 @@
                         e.target.dispatchEvent(new Event('input', { bubbles: true }));
                     }
                 });
-                
+
                 // Prevent default increment/decrement behavior on mousewheel
                 input.addEventListener('wheel', (e) => {
                     e.preventDefault();
@@ -1558,20 +1601,20 @@
                         e.target.dispatchEvent(new Event('input', { bubbles: true }));
                     }
                 }, { passive: false });
-                
+
                 // Handle clicks on spinner buttons
                 let spinnerTimeout;
                 input.addEventListener('mousedown', (e) => {
                     const rect = e.target.getBoundingClientRect();
                     const clickX = e.clientX - rect.left;
                     const clickY = e.clientY - rect.top;
-                    
+
                     // Check if click is on the spinner area (right side of input)
                     const spinnerWidth = 20; // Approximate width of spinner buttons
                     if (clickX > rect.width - spinnerWidth) {
                         e.preventDefault();
                         const current = parseInt(e.target.value) || 0;
-                        
+
                         // Determine if click is on upper or lower half
                         if (clickY < rect.height / 2) {
                             // Upper arrow - increment
@@ -1586,7 +1629,7 @@
                         }
                     }
                 });
-                
+
                 // Also intercept the default increment/decrement that happens after mousedown
                 input.addEventListener('input', (e) => {
                     // If this input event was triggered by spinner click, use our logic
@@ -1609,17 +1652,17 @@
                         }
                     }
                 });
-                
+
                 input.addEventListener('input', (e) => {
                     let value = parseInt(e.target.value);
                     if (isNaN(value)) value = 0;
-                    
+
                     // Don't auto-clamp - let them see their invalid input
                     if (value < 0 || value > 255) {
                         e.target.classList.add('invalid');
                         const existingError = e.target.parentElement.querySelector('.validation-error');
                         if (existingError) existingError.remove();
-                        
+
                         const error = document.createElement('div');
                         error.className = 'validation-error';
                         if (value < 0) {
@@ -1635,14 +1678,14 @@
                         e.target.parentElement.appendChild(error);
                         return;
                     }
-                    
+
                     value = Math.max(0, Math.min(255, value));
-                    
+
                     // Clear existing error for this input
                     const existingError = e.target.parentElement.querySelector('.validation-error');
                     if (existingError) existingError.remove();
                     e.target.classList.remove('invalid');
-                    
+
                     // Validate individual octet
                     if (!isValidMaskOctet(value)) {
                         e.target.classList.add('invalid');
@@ -1657,7 +1700,7 @@
                         e.target.parentElement.appendChild(error);
                         return;
                     }
-                    
+
                     // Get all mask octets
                     const maskOctets = [
                         parseInt(document.getElementById('mask1').value) || 0,
@@ -1675,7 +1718,7 @@
                             const err = maskInput.parentElement.querySelector('.validation-error');
                             if (err) err.remove();
                         }
-                        
+
                         state.cidrBits = maskToCidr(maskOctets);
                         updateFromState();
                     } else {
@@ -1683,11 +1726,11 @@
                         e.target.classList.add('invalid');
                         const error = document.createElement('div');
                         error.className = 'validation-error';
-                        
+
                         // Check for common mistakes
                         let foundNon255 = false;
                         let errorMsg = '❌ Ungültige Subnetzmaske!\n\n';
-                        
+
                         for (let j = 0; j < 4; j++) {
                             if (maskOctets[j] < 255) {
                                 foundNon255 = true;
@@ -1705,7 +1748,7 @@
                                 return;
                             }
                         }
-                        
+
                         errorMsg += 'Die Maske muss durchgehend sein:\n';
                         errorMsg += 'Erst Einsen (von links), dann Nullen (bis rechts).\n\n';
                         errorMsg += `Aktuelle Maske:\n${maskOctets.join('.')}`;
@@ -1718,7 +1761,7 @@
                         e.target.parentElement.appendChild(error);
                     }
                 });
-                
+
                 input.addEventListener('blur', (e) => {
                     let value = parseInt(e.target.value);
                     if (isNaN(value) || value < 0) {
@@ -1727,7 +1770,7 @@
                         value = 255;
                     }
                     e.target.value = value;
-                    
+
                     // Don't auto-correct, keep showing the error if invalid
                     // Just ensure it's in valid range for the input field
                     const existingError = e.target.parentElement.querySelector('.validation-error');
@@ -1747,18 +1790,18 @@
                         }
                         return;
                     }
-                    
+
                     // Clear error if now valid
                     if (existingError) existingError.remove();
                     e.target.classList.remove('invalid');
-                    
+
                     const maskOctets = [
                         parseInt(document.getElementById('mask1').value) || 0,
                         parseInt(document.getElementById('mask2').value) || 0,
                         parseInt(document.getElementById('mask3').value) || 0,
                         parseInt(document.getElementById('mask4').value) || 0
                     ];
-                    
+
                     if (isValidMask(maskOctets)) {
                         state.cidrBits = maskToCidr(maskOctets);
                         updateFromState();
@@ -1817,7 +1860,7 @@
                 generateIPInNetworkQuiz(),
                 generateSubnetSizeQuiz()
             ].filter(q => q !== null);
-            
+
             state.currentQuizIndex = 0;
             state.quizAnswers = {};
             state.lastQuizSignature = getQuizSignature();
@@ -1827,13 +1870,13 @@
         function displayCurrentQuiz() {
             const container = document.getElementById('quizContainer');
             container.innerHTML = '';
-            
+
             if (state.quizzes.length === 0) return;
-            
+
             const quiz = state.quizzes[state.currentQuizIndex];
             const quizCard = createQuizCard(quiz, state.currentQuizIndex);
             container.appendChild(quizCard);
-            
+
             // Update navigation
             document.getElementById('prevQuizBtn').disabled = state.currentQuizIndex === 0;
             document.getElementById('nextQuizBtn').disabled = state.currentQuizIndex === state.quizzes.length - 1;
@@ -1843,7 +1886,7 @@
         function generateHostCountQuiz() {
             const correctAnswer = calculateHostCount(state.cidrBits);
             const totalIPs = calculateTotalIPs(state.cidrBits);
-            
+
             const options = [
                 { text: correctAnswer.toLocaleString('de-DE'), correct: true },
                 { text: totalIPs.toLocaleString('de-DE'), correct: false },
@@ -1883,12 +1926,20 @@
             const broadcast = calculateBroadcast(state.octets, state.cidrBits);
             const networkInt = ipToInt(network);
             const totalIPs = calculateTotalIPs(state.cidrBits);
-            
+
+            // If we have a /0 network (or effectively the whole IPv4 space), we can't find an "invalid" IP
+            if (state.cidrBits === 0) {
+                return null;
+            }
+
             // Generate a valid IP in this network
             const validIP = intToIp(networkInt + Math.floor(Math.random() * totalIPs));
-            
+
             // Generate an IP outside this network
             let invalidIP;
+            let attempts = 0;
+            const maxAttempts = 100;
+
             do {
                 invalidIP = [
                     Math.floor(Math.random() * 256),
@@ -1896,7 +1947,18 @@
                     Math.floor(Math.random() * 256),
                     Math.floor(Math.random() * 256)
                 ];
-            } while (ipToInt(invalidIP) >= networkInt && ipToInt(invalidIP) < networkInt + totalIPs);
+                attempts++;
+            } while (
+                (ipToInt(invalidIP) >= networkInt && ipToInt(invalidIP) <= ipToInt(broadcast)) &&
+                attempts < maxAttempts
+            );
+
+            // If we couldn't find an invalid IP (should be rare unless network is huge), default to valid only or skip
+            if (attempts >= maxAttempts) {
+                // Fallback: just use a valid IP question or return null
+                // For simplicity, let's just return null to skip this quiz type if we can't generate it
+                return null;
+            }
 
             const testIP = Math.random() > 0.5 ? validIP : invalidIP;
             const isInNetwork = ipToInt(testIP) >= networkInt && ipToInt(testIP) <= ipToInt(broadcast);
@@ -1909,7 +1971,7 @@
             return {
                 question: `Ist die IP-Adresse ${testIP.join('.')} Teil dieses Netzwerks?`,
                 options: options,
-                explanation: isInNetwork 
+                explanation: isInNetwork
                     ? `Ja, ${testIP.join('.')} liegt im Bereich ${network.join('.')} bis ${broadcast.join('.')}.`
                     : `Nein, ${testIP.join('.')} liegt außerhalb des Bereichs ${network.join('.')} bis ${broadcast.join('.')}.`
             };
@@ -2022,4 +2084,5 @@
         init();
     </script>
 </body>
+
 </html>
