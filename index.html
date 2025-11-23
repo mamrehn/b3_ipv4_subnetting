@@ -1887,12 +1887,33 @@
             const correctAnswer = calculateHostCount(state.cidrBits);
             const totalIPs = calculateTotalIPs(state.cidrBits);
 
+            // Ensure we generate unique options
             const options = [
                 { text: correctAnswer.toLocaleString('de-DE'), correct: true },
-                { text: totalIPs.toLocaleString('de-DE'), correct: false },
-                { text: (correctAnswer + 2).toLocaleString('de-DE'), correct: false },
-                { text: (correctAnswer - 1).toLocaleString('de-DE'), correct: false }
-            ].sort(() => Math.random() - 0.5);
+                { text: totalIPs.toLocaleString('de-DE'), correct: false }
+            ];
+
+            // Add more distractors that are likely unique
+            // Distractor 1: Half the hosts (common misconception about splitting networks)
+            const halfHosts = Math.floor(correctAnswer / 2);
+            if (halfHosts !== correctAnswer && halfHosts !== totalIPs) {
+                options.push({ text: halfHosts.toLocaleString('de-DE'), correct: false });
+            } else {
+                // Fallback if half is same (e.g. 0)
+                options.push({ text: (correctAnswer + 10).toLocaleString('de-DE'), correct: false });
+            }
+
+            // Distractor 2: One less (off-by-one error)
+            const oneLess = correctAnswer - 1;
+            if (oneLess >= 0 && oneLess !== halfHosts) {
+                options.push({ text: oneLess.toLocaleString('de-DE'), correct: false });
+            } else {
+                // Fallback
+                options.push({ text: (totalIPs + 100).toLocaleString('de-DE'), correct: false });
+            }
+
+            // Shuffle
+            options.sort(() => Math.random() - 0.5);
 
             return {
                 question: 'Wie viele Geräte können in diesem Netzwerk maximal konfiguriert werden?',
